@@ -12,12 +12,12 @@ function plugin_filterByDate() {
 		var d = new Date();
 		var base =  fs.attr('data-base');
 		if (base == 'week') {
-			d = d.getDay();
+			d = d.getDay()-1;
 		} else if (base == 'year') {
 			var y = new Date(d.getFullYear(), 0, 0);
-			d = Math.ceil((d-y)/(1000*60*60*24)); 
+			d = Math.ceil((d-y)/(1000*60*60*24))-1; 
 		} else {
-			d = d.getDate();
+			d = d.getDate()-1;
 		}
 		var li = gr.find("li");
 		if (li.length != 0) {
@@ -26,7 +26,7 @@ function plugin_filterByDate() {
 				d += o;
 			}
 			if (fs.attr('data-repeat') != 'false') {
-				d = (d-1) % li.length;
+				d = d % li.length;
 			}
 			gr.find("li").each(function (k,v) {
 				if (d==k) {
