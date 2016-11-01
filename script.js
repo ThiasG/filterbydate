@@ -26,12 +26,12 @@ function plugin_filterByDate() {
 				d += o;
 			}
 			if (fs.attr('data-repeat') != 'false') {
-				d = d % li.length;
+				d = (d-1) % li.length;
 			}
 			gr.find("li").each(function (k,v) {
 				if (d==k) {
 					if (jQuery(v).parent().prop('tagName') == 'OL') {
-						jQuery(v).parent().attr('start', (d).toString());
+						jQuery(v).parent().attr('start', (d+1).toString());
 					}
 				} else {
 					jQuery(v).hide();
