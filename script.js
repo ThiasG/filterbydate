@@ -15,7 +15,7 @@ function plugin_filterByDate() {
 			d = d.getDay()-1;
 		} else if (base == 'year') {
 			var y = new Date(d.getFullYear(), 0, 0);
-			d = Math.ceil((d-y)/(1000*60*60*24))-1; 
+			d = Math.floor((d-y)/(1000*60*60*24))-1; 
 		} else {
 			d = d.getDate()-1;
 		}
