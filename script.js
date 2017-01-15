@@ -12,7 +12,7 @@ function plugin_filterByDate() {
 		var d = new Date();
 		var base =  fs.attr('data-base');
 		if (base == 'week') {
-			d = d.getDay()-1;
+			d = d.getDay();
 		} else if (base == 'year') {
 			var y = new Date(d.getFullYear(), 0, 0);
 			d = Math.floor((d-y)/(1000*60*60*24))-1; 
