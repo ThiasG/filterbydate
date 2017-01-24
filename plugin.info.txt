@@ -1,7 +1,7 @@
 base   filterbydate
 author Matthias Grutzeck
-email  filterbydate@acc.grutzeck.net
-date   2016-10-14
+email  dokuwikiacc.grutzeck.net
+date   2016-10-24
 name   filterbydate plugin
 desc   Filters list items by date modulo entries count
 url    https://github.com/ThiasG/filterbydate
